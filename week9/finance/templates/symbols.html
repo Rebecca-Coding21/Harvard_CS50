@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search for symbols
+{% endblock %}
+
+{% block main %}
+    <form action = "/symbols" method = "POST">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Company Name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Search Symbol</button>
+    </form>
+{% endblock %}

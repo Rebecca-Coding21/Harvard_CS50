@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Summary
+{% endblock %}
+
+
+{% block main %}
+    <header>
+        <div class="alert alert-primary mb-0 text-center" role="alert">{{message}}</div>
+    </header>
+
+    <table class = "table mytext table-bordered">
+        <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Name</th>
+              <th scope="col">Shares</th>
+              <th scope="col">Price</th>
+              <th scope="col">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          {% for entry in summaryList %}
+            <tr>
+              <td>{{entry["symbol"]}}</td>
+              <td>{{entry["name"]}}</td>
+              <td>{{entry["shares"]}}</td>
+              <td>{{entry["price"]}}</td>
+              <td>{{entry["total"]}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class = "border-0 fw-bold text-end" colspan = "4">Cash:</td>
+            <td class = "border-0 text-end">{{cash}}</td>
+          </tr>
+          <tr>
+            <td class = "border-0 fw-bold text-end" colspan = "4">Total:</td>
+            <td class = "border-0 text-end">{{total}}</td>
+          </tr>
+        </tfoot>
+    </table>
+{% endblock %}

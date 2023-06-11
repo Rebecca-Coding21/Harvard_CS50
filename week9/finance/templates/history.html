@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+
+
+{% block main %}
+    <h2>Transaction History</h2>
+
+    <table class = "table mytext table-bordered">
+        <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Name</th>
+              <th scope="col">Shares</th>
+              <th scope="col">Price</th>
+              <th scope="col">Total</th>
+              <th scope="col">Transacted</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          {% for transaction in transactions %}
+            <tr>
+              <td>{{transaction["symbol"]}}</td>
+              <td>{{transaction["name"]}}</td>
+              <td>{{transaction["shares"]}}</td>
+              <td>{{transaction["price"]}}</td>
+              <td>{{transaction["total"]}}</td>
+              <td>{{transaction["datetime"]}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

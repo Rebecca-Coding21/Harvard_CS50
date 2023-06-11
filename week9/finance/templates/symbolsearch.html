@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Symbols
+{% endblock %}
+
+{% block main %}
+<table class = "table mytext table-bordered">
+    <thead>
+        <tr>
+          <th scope="col">Company Name</th>
+          <th scope="col">Symbol</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr>
+          <td>{{name}}</td>
+          <td>{{symbol}}</td>
+        </tr>
+    </tbody>
+{% endblock %}
