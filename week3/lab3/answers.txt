@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: It needs less time to sort a sorted list and needs much time forh larger data sets
+
+sort2 uses: merge sort
+
+How do you know?: It needs less time than the other sort algorithms and the time needed for sorted and unsorted lists is equal.
+
+sort3 uses: selection sort
+
+How do you know?: It needs most time to sort a sorted list and is not the fastest algorithm with big data sets.
